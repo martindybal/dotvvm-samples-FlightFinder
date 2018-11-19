@@ -13,7 +13,8 @@ namespace FlightFinder.Web
             ConfigureRoutes(config, applicationPath);
             ConfigureControls(config, applicationPath);
             ConfigureResources(config, applicationPath);
-            //config.Debug = false;
+            config.DefaultCulture = "en-US";
+            config.Debug = false;
         }
 
         private void ConfigureRoutes(DotvvmConfiguration config, string applicationPath)

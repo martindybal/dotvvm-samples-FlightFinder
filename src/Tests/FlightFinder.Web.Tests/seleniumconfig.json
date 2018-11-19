@@ -1,0 +1,17 @@
+﻿{
+  "factories": {
+    "chrome:dev": {}
+  },
+    "baseUrls": [
+        "http://localhost:11902/"
+    ],
+  "testRunOptions": {
+    "runInParallel": false,
+    "testAttemptsCount": 1
+  },
+  "logging": {
+    "loggers": {
+      "testContext": {}
+    }
+  }
+}

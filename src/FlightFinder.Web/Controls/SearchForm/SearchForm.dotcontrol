@@ -7,7 +7,8 @@
         <div class="col pr-0">
             <div class="form-control d-flex">
                 <div><i>✈</i>&nbsp;&nbsp;From:</div>
-                <bp:ComboBox class="flex-grow-1"
+                <bp:ComboBox data-ui="SearchFormFromAirport"
+                             class="flex-grow-1"
                              DataSource="{value: Airports}"
                              ItemTextBinding="{value: Code + " - " + DisplayName}"
                              ItemValueBinding="{value: Code}"
@@ -21,7 +22,8 @@
         <div class="col pl-0">
             <div class="form-control d-flex">
                 <div><i>✈</i>&nbsp;&nbsp;To:</div>
-                <bp:ComboBox DataSource="{value: Airports}"
+                <bp:ComboBox data-ui="SearchFormToAirport"
+                             DataSource="{value: Airports}"
                              class="flex-grow-1"
                              ItemTextBinding="{value: Code + " - " + DisplayName}"
                              ItemValueBinding="{value: Code}"
@@ -37,7 +39,7 @@
         <div class="col pr-0">
             <div class="form-control d-flex">
                 <div><i>🗓</i>&nbsp;&nbsp;Depart:</div>
-                <bp:DatePicker class="flex-grow-1" MinDate="{value: Today}" SelectedDate="{value: Criteria.OutboundDate}" />
+                <bp:DatePicker data-ui="SearchFormDepartDate" class="flex-grow-1" MinDate="{value: Today}" SelectedDate="{value: Criteria.OutboundDate}" FormatString="D" />
             </div>
         </div>
         <div class="col px-2 py-1 align-self-end arrow">➝</div>
@@ -46,7 +48,7 @@
         <div class="col pl-0">
             <div class="form-control d-flex">
                 <div><i>🗓</i>&nbsp;&nbsp;Return:</div>
-                <bp:DatePicker class="flex-grow-1" MinDate="{value: Criteria.OutboundDate}" SelectedDate="{value: Criteria.ReturnDate}" />
+                <bp:DatePicker data-ui="SearchFormReturnDate" class="flex-grow-1" MinDate="{value: Criteria.OutboundDate}" SelectedDate="{value: Criteria.ReturnDate}" FormatString="D" />
             </div>
         </div>
     </div>
@@ -54,14 +56,16 @@
     <!-- Class / search -->
     <div class="row py-1 d-flex px-3">
         <div>
-            <bp:ComboBox class="custom-select"
+            <bp:ComboBox data-ui="SearchFormTicketClasses"
+                         class="custom-select"
                          DataSource="{value: TicketClasses}"
                          ItemTextBinding="{value: Name}"
                          ItemValueBinding="{value: Value}"
                          SelectedValue="{value: Criteria.TicketClass}" />
         </div>
         <div class="ml-auto">
-            <dot:Button class="btn btn-danger px-5"
+            <dot:Button data-ui="SearchFormSearch"
+                        class="btn btn-danger px-5"
                         ButtonTagName="button"
                         Click="{command: _root.Search()}">
                 Search ➝

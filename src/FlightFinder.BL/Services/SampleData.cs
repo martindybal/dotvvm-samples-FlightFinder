@@ -56,6 +56,7 @@ namespace FlightFinder.BL.Services
             new Airport { Code = "NRT", DisplayName = "Narita International" },
             new Airport { Code = "MSP", DisplayName = "Minneapolis/St Paul International" },
             new Airport { Code = "DOH", DisplayName = "Hamad International" },
+            new Airport { Code = "PRG", DisplayName = "Prague" },
         };
         
         public readonly static string[] Airlines = new[]

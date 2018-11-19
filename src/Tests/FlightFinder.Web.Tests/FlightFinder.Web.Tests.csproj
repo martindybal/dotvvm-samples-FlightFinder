@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Configurations>Debug;Release;Public</Configurations>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="Riganti.Selenium.AssertApi" Version="2.0.3" />
+    <PackageReference Include="Riganti.Selenium.DotVVM" Version="2.0.3" />
+    <PackageReference Include="Riganti.Selenium.xUnitIntegration" Version="2.0.3" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FlightFinder.BL\FlightFinder.BL.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="seleniumconfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

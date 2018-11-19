@@ -38,10 +38,10 @@
     <None Remove="Pages\MasterPage.dotmaster" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DotVVM.BusinessPack" Version="2.0.0-preview17-32300" />
+    <PackageReference Include="DotVVM.BusinessPack" Version="2.1.0-preview08-34757" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.3" />
-    <PackageReference Include="DotVVM.AspNetCore" Version="2.0.3" />
+    <PackageReference Include="DotVVM.AspNetCore" Version="2.1.0-preview01-34212" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="DotVVM.Compiler.Light" Version="2.0.3" />
