@@ -5,12 +5,16 @@
     <cc:Shortlist DataContext="{value:  _root.ShortlistModel}" />
 
     <form Validation.Target="{value: _this}" DataContext="{value:  Order.Customer}">
-        <label for="order_customer_name">Your name</label>
-        <bp:TextBox id="order_customer_name" name="name" Text="{value: Name}" AutoFocus /><br />
+        <div class="form-input-c">
+            <label for="order_customer_name">Your name</label>
+            <bp:TextBox id="order_customer_name" name="name" Text="{value: Name}" AutoFocus />
+        </div>
+        <div class="form-input-c">
+            <label for="order_customer_email">Your email</label>
+            <bp:TextBox id="order_customer_email" name="email" Text="{value: Email}" Type="Email" />
+        </div>
+                                                                                                <div class="text-to-right"><dot:Button class="button button-secondary" ButtonTagName="button" Text="Next" Click="{command: null}" /></div>
+        
 
-        <label for="order_customer_email">Your email</label>
-        <bp:TextBox id="order_customer_email" name="email" Text="{value: Email}" Type="Email" /><br />
-
-        <bp:Button Text="Next" Click="{command: null}"></bp:Button>
     </form>
 </bp:ModalDialog>

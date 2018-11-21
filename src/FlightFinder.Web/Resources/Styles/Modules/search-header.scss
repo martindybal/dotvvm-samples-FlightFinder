@@ -1,0 +1,28 @@
+﻿@import "../base/global";
+
+.section-search-header {
+    background: $color-gradient;
+    padding: 1.6rem;
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        
+        &_input {
+            flex: 1 1 50%;
+        }
+
+        &_arrow {
+            margin: 0 1rem;
+            color: $color-white;
+            font-size: 20px;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,46 @@
+﻿@import "../base/global";
+
+.dotvvm-bp-control.dotvvm-bp-combo-box {
+    background-color: rgba(0,0,0,.1);
+    border: 0;
+    font-size: $font-size-text;
+    border-radius: $border-radius;
+    padding: .4rem .8rem;
+
+    input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        font-size: $font-size-text;
+        font-weight: 600;
+        color: $color-white;
+    }
+
+    &:focus,
+    &.dotvvm-bp-state_focused {
+        border: 1px solid $color-white;
+        -webkit-box-shadow: 0 0 0 1px $color-white;
+        box-shadow: 0 0 0 1px $color-white;
+
+        input {
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    > a[role=button] {
+        background: transparent;
+        color: $color-label;
+        cursor: pointer;
+
+        &:hover {
+            background: transparent;
+            color: $color-white;
+        }
+
+        svg {
+            font-size: 16px;
+        }
+    }
+}
+

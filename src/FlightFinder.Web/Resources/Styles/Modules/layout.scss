@@ -1,0 +1,20 @@
+﻿@import "../base/global";
+
+main {
+    display: flex;
+
+    .section-search {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        &-results {
+            flex-grow: 1;
+        }
+    }
+
+    .section-selection {
+        flex: 0 0 35rem;
+        background-color: $color-bg-dark;
+    }
+}

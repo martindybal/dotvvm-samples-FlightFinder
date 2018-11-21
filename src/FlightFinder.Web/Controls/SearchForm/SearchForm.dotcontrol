@@ -2,13 +2,12 @@
 
 <div class="col" DataContext="{value: SearchFormModel}" Validation.Target="{value: _this}">
     <!-- Airport selection -->
-    <div class="row py-1">
+    <div class="section-search-header-row">
         <!-- From airport -->
-        <div class="col pr-0">
-            <div class="form-control d-flex">
-                <div><i>✈</i>&nbsp;&nbsp;From:</div>
+        <div class="section-search-header-row_input">
+            <div class="input-c">
+                <div class="input-label"><i>✈</i>&nbsp;&nbsp;From:</div>
                 <bp:ComboBox data-ui="SearchFormFromAirport"
-                             class="flex-grow-1"
                              DataSource="{value: Airports}"
                              ItemTextBinding="{value: Code + " - " + DisplayName}"
                              ItemValueBinding="{value: Code}"
@@ -16,15 +15,14 @@
                              EmptyItemText="..." />
             </div>
         </div>
-        <div class="col px-2 py-1 align-self-end arrow">➝</div>
+        <div class="section-search-header-row_arrow">➝</div>
 
         <!-- To airport -->
-        <div class="col pl-0">
-            <div class="form-control d-flex">
-                <div><i>✈</i>&nbsp;&nbsp;To:</div>
+        <div class="section-search-header-row_input">
+            <div class="input-c">
+                <div class="input-label"><i>✈</i>&nbsp;&nbsp;To:</div>
                 <bp:ComboBox data-ui="SearchFormToAirport"
                              DataSource="{value: Airports}"
-                             class="flex-grow-1"
                              ItemTextBinding="{value: Code + " - " + DisplayName}"
                              ItemValueBinding="{value: Code}"
                              SelectedValue="{value: Criteria.ToAirport}"
@@ -34,38 +32,37 @@
     </div>
 
     <!-- Departure / return dates -->
-    <div class="row py-1">
+    <div class="section-search-header-row">
         <!-- Depart date -->
-        <div class="col pr-0">
-            <div class="form-control d-flex">
-                <div><i>🗓</i>&nbsp;&nbsp;Depart:</div>
+        <div class="section-search-header-row_input">
+            <div class="input-c">
+                <div class="input-label"><i>🗓</i>&nbsp;&nbsp;Depart:</div>
                 <bp:DatePicker data-ui="SearchFormDepartDate" class="flex-grow-1" MinDate="{value: Today}" SelectedDate="{value: Criteria.OutboundDate}" FormatString="D" />
             </div>
         </div>
-        <div class="col px-2 py-1 align-self-end arrow">➝</div>
+        <div class="section-search-header-row_arrow">➝</div>
 
         <!-- Return date -->
-        <div class="col pl-0">
-            <div class="form-control d-flex">
-                <div><i>🗓</i>&nbsp;&nbsp;Return:</div>
-                <bp:DatePicker data-ui="SearchFormReturnDate" class="flex-grow-1" MinDate="{value: Criteria.OutboundDate}" SelectedDate="{value: Criteria.ReturnDate}" FormatString="D" />
+        <div class="section-search-header-row_input">
+            <div class="input-c">
+                <div class="input-label"><i>🗓</i>&nbsp;&nbsp;Return:</div>
+                <bp:DatePicker data-ui="SearchFormReturnDate" MinDate="{value: Criteria.OutboundDate}" SelectedDate="{value: Criteria.ReturnDate}" FormatString="D" />
             </div>
         </div>
     </div>
 
     <!-- Class / search -->
-    <div class="row py-1 d-flex px-3">
+    <div class="section-search-header-buttons">
         <div>
             <bp:ComboBox data-ui="SearchFormTicketClasses"
-                         class="custom-select"
                          DataSource="{value: TicketClasses}"
                          ItemTextBinding="{value: Name}"
                          ItemValueBinding="{value: Value}"
                          SelectedValue="{value: Criteria.TicketClass}" />
         </div>
-        <div class="ml-auto">
+        <div class="">
             <dot:Button data-ui="SearchFormSearch"
-                        class="btn btn-danger px-5"
+                        class="button button-primary"
                         ButtonTagName="button"
                         Click="{command: _root.Search()}">
                 Search ➝

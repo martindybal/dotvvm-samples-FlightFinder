@@ -6,20 +6,20 @@
 </div>
 
 <div class="airline">
-    {{value: Airline}}
+    <div class="airline-title">{{value: Airline}}</div>
     <small>{{value: TicketClass.Name}}</small>
 </div>
 
 <div class="departure">
     <h4>{{value: DepartureTime.ToString("H:mm")}}</h4>
-    {{value: ReturnTime.ToString("ddd MMM d")}} ({{value: FromAirportCode}})
+    <small>{{value: ReturnTime.ToString("ddd MMM d")}} ({{value: FromAirportCode}})</small>
 </div>
 
 <div class="arrow">➝</div>
 
 <div class="return">
     <h4>{{value: ReturnTime.ToString("H:mm")}}</h4>
-    {{value: ReturnTime.ToString("ddd MMM d")}} ({{value: ToAirportCode}})
+    <small>{{value: ReturnTime.ToString("ddd MMM d")}} ({{value: ToAirportCode}})</small>
 </div>
 
 <div class="duration">

@@ -1,27 +1,27 @@
 ﻿@viewModel FlightFinder.Web.Pages.FlightSearch.FlightSearchViewModel, FlightFinder.Web
 @masterPage Pages/MasterPage.dotmaster
 <dot:Content ContentPlaceHolderID="MainContent">
-
-    <div id="search-and-results-area">
-        <div id="search-area" class="px-2 py-3">
-            <cc:SearchForm />
-        </div>
-        <div id="results-area">
-            <div class-greyout="{value: _page.IsPostbackRunning}">
-                <div class="cover"></div>
-                <cc:SearchResults />
+    <main>
+        <div class="section-search">
+            <div class="section-search-header">
+                <cc:SearchForm />
+            </div>
+            <div class="section-search-results">
+                <div class-greyout="{value: _page.IsPostbackRunning}">
+                    <div class="cover"></div>
+                    <cc:SearchResults />
+                </div>
             </div>
         </div>
-    </div>
-    <div id="selections-area" class="p-3 pl-4">
-        <cc:Shortlist DataContext="{value: ShortlistModel}" />
+        <div class="section-selection">
+            <cc:Shortlist DataContext="{value: ShortlistModel}" />
 
-        <div class="list-group-item" Visible="{value: ShortlistModel.Shortlist.Count > 0}">
-            <span style="">Price: ${{value: ShortlistModel.TotalPrice.ToString("0")}}</span>
-            <dot:Button class="btn" ButtonTagName="button" Text="Buy" Click="{staticCommand: OrderDialogModel.DialogIsOpen = true}" />
+            <div class="section-selection-bottom" Visible="{value: ShortlistModel.Shortlist.Count > 0}">
+                <span style="">Price: ${{value: ShortlistModel.TotalPrice.ToString("0")}}</span>
+                <dot:Button class="button button-secondary" ButtonTagName="button" Text="Buy" Click="{staticCommand: OrderDialogModel.DialogIsOpen = true}" />
+            </div>
         </div>
-    </div>
 
-    <cc:OrderDialog />
-
+        <cc:OrderDialog />
+    </main>
 </dot:Content>

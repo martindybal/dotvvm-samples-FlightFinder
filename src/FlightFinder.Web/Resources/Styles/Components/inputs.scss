@@ -1,0 +1,62 @@
+﻿@import "../base/global";
+
+.input-c {
+    display: flex;
+    background: $color-bg-transparent;
+    padding: .8rem 1rem;
+    border-radius: $border-radius;
+    align-items: center;
+
+    i {
+        font-style: normal;
+    }
+
+    .input-label {
+        color: $color-label;
+        width: 9rem;
+    }
+
+    .dotvvm-bp-control {
+        flex: 1 1 auto;
+        border-radius: $border-radius;
+        border: 1px solid transparent;
+        background: transparent;
+        font-size: $font-size-text;
+        line-height: $line-height-text;
+
+        &.dotvvm-bp-combo-box {
+            padding: 0;
+            background: transparent;
+            border: 1px solid transparent;
+        } 
+
+        input {
+            background: transparent;
+            color: $color-white;
+            font-weight: 600;
+            font-size: $font-size-text;
+            line-height: normal;
+            padding: 0 1rem;
+        }
+
+        &:focus,
+        &.dotvvm-bp-state_focused {
+            border-color: $color-white;
+            -webkit-box-shadow: 0 0 0 1px $color-white;
+            box-shadow: 0 0 0 1px $color-white;
+        }
+
+        > a[role=button] {
+            background: transparent;
+            color: $color-label;
+            cursor: pointer;
+
+            &:hover {
+                background: transparent;
+                color: $color-white;
+            }
+        }
+
+        
+    }
+}

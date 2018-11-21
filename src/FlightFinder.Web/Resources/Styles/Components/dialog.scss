@@ -1,0 +1,86 @@
+﻿@import "../base/global";
+
+.dotvvm-bp-control.dotvvm-bp-modal-dialog {
+    font-size: $font-size-text;
+    border-radius: $border-radius;
+    overflow: hidden;
+    width: 80rem;
+
+    .dotvvm-bp-primitive_header {
+        background-color: $color-primary;
+
+        .dotvvm-bp-command_close {
+            background: none;
+            border: 0;
+            color: $color-white;
+
+            .dotvvm-bp-icon {
+                height: 2rem;
+                width: 2rem;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    .dotvvm-bp-dialog_body {
+        padding: 1.6rem;
+        flex-direction: column;
+
+        h2 {
+            color: $color-font;
+            margin: 0;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .section-selection-list {
+            border: 1px solid $color-border;
+
+            li:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        .price {
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .text-to-right {
+            text-align: right;
+
+            .button {
+                padding: .8rem 3.5rem;
+            }
+        }
+
+        .form-input-c {
+            margin-bottom: 1rem;
+
+            label {
+                display: inline-block;
+                color: $color-label;
+                width: 15rem;
+            }
+
+            input {
+                font-size: $font-size-text;
+                line-height: $line-height-text;
+                border-color: $color-border;
+                border-radius: $border-radius;
+
+                &:focus,
+                &.dotvvm-bp-state_focused {
+                    border-color: $color-primary;
+                    -webkit-box-shadow: 0 0 0 1px $color-primary;
+                    box-shadow: 0 0 0 1px $color-primary;
+                }
+            }
+        }
+    }
+}

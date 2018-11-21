@@ -1,0 +1,63 @@
+﻿@import "../base/global";
+
+.input-c {
+    .dotvvm-bp-date-picker.dotvvm-bp-control {
+        width: 25.5rem;
+        flex: 0 1 auto;
+        border: 0;
+        background: transparent;
+        font-size: $font-size-text;
+        line-height: $line-height-text;
+
+        input {
+            width: 100%;
+            background: transparent;
+            color: $color-white;
+            font-weight: 600;
+            font-size: $font-size-text;
+            line-height: normal;
+            padding: 0 1rem;
+        }
+
+        &:focus,
+        &.dotvvm-bp-state_focused {
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+
+            input {
+                border: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+        }
+
+        > a[role=button] {
+            display: none;
+        }
+
+        .dotvvm-bp-calendar {
+            .dotvvm-bp-primitive_header {
+                background: $color-primary;
+
+                > a[role=button] {
+                    &:hover {
+                        background-color: lighten( $color-primary, 5%);
+                    }
+                }
+            }
+
+            .dotvvm-bp-calendar_day:hover {
+                background-color: $color-primary;
+                border-color: $color-primary;
+                border-radius: $border-radius;
+            }
+
+            .dotvvm-bp-calendar_today {
+                -webkit-box-shadow: inset 0 0 0 2px $color-primary;
+                box-shadow: inset 0 0 0 2px $color-primary;
+                border-radius: $border-radius;
+            }
+        }
+    }
+}

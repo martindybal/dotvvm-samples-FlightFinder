@@ -3,8 +3,8 @@
 <h2>Shortlist ({{value: Shortlist.Count}})</h2>
 
 <dot:Repeater DataSource="{value: Shortlist}">
-    <ul class="list-group mb-4">
-        <li class="list-group-item justify-content-between">
+    <ul class="section-selection-list">
+        <li>
             <div>
                 <nobr>{{value: Outbound.FromAirportCode}}</nobr> -
                 <nobr>{{value: Outbound.ToAirportCode}}</nobr>
@@ -15,13 +15,13 @@
                 <span aria-hidden="true">&times;</span>
             </dot:Button>
         </li>
-        <li class="list-group-item">
+        <li class="section-selection-list-item">
             <cc:ShortlistFlightSegment DataContext="{value: Outbound}" />
         </li>
-        <li class="list-group-item">
+        <li class="section-selection-list-item">
             <cc:ShortlistFlightSegment DataContext="{value: Return}" />
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+        <li class="section-selection-list-item-price">
             <div class="airline"><h4>{{value: AirlineName}}</h4></div>
             <div class="price"><h2>${{value: Price.ToString("0")}}</h2></div>
         </li>
