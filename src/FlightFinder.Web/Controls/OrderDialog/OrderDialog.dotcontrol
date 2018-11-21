@@ -13,7 +13,7 @@
             <label for="order_customer_email">Your email</label>
             <bp:TextBox id="order_customer_email" name="email" Text="{value: Email}" Type="Email" />
         </div>
-                                                                                                <div class="text-to-right"><dot:Button class="button button-secondary" ButtonTagName="button" Text="Next" Click="{command: null}" /></div>
+        <div class="text-to-right"><dot:Button class="button button-secondary" ButtonTagName="button" Text="Next" Click="{command: null}" /></div>
         
 
     </form>
