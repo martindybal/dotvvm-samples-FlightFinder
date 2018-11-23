@@ -1,9 +1,6 @@
 ﻿@viewModel FlightFinder.Web.Pages.FlightSearch.FlightSearchViewModel, FlightFinder.Web
-
 <bp:ModalDialog DataContext="{value:  OrderDialogModel}" Validation.Target="{value: _this}" IsDisplayed="{value: DialogIsOpen}">
-
     <cc:Shortlist DataContext="{value:  _root.ShortlistModel}" />
-
     <form Validation.Target="{value: _this}" DataContext="{value:  Order.Customer}">
         <div class="form-input-c" Validator.Value="{value: Name}" Validator.SetToolTipText="true">
             <label for="order_customer_name">Your name</label>
@@ -13,8 +10,12 @@
             <label for="order_customer_email">Your email</label>
             <bp:TextBox id="order_customer_email" name="email" Text="{value: Email}" Type="Email" />
         </div>
-        <div class="text-to-right"><dot:Button class="button button-secondary" ButtonTagName="button" Text="Next" Click="{command: null}" /></div>
-        
-
+        <div class="text-to-right">
+            <dot:Button class="button button-secondary" ButtonTagName="button" Text="Next" IsSubmitButton Click="{command: _parent.Next()}" />
+        </div>
     </form>
+</bp:ModalDialog>
+
+<bp:ModalDialog IsDisplayed="{value: OrderDialogModel.ResultDialogIsOpen}">
+    {{value: OrderDialogModel.ResultMessage}}
 </bp:ModalDialog>
